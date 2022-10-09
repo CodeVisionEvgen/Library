@@ -1,4 +1,4 @@
-import {Router} from 'express';
+import express, {Router} from 'express';
 import valides from '../validation/valid.js';
 import {validationResult} from 'express-validator';
 
@@ -19,5 +19,6 @@ router
         console.log(error)
     }
 })
+.use('/public', express.static('./my-app/public'))
 
 export default router;
